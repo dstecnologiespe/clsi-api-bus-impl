@@ -11,29 +11,10 @@ provider:
     restApiRootResourceId: !GetAtt MyApiGateway.RootResourceId
 
 resources: ${file(config/serverless/apigateway.yml)}
-  # Resources:
-  #   MyApiGateway:
-  #     Type: AWS::ApiGateway::RestApi
-  #     Properties:
-  #       Name: UE2APIDESACLSIV1
-  #       Description: API para el proyecto CLSI API
-  #       FailOnWarnings: true
-
 functions: ${file(config/serverless/function.cloud.yml)} 
-  # helloWorld:
-  #   name: UE2DESACOMLMBILAB001
-  #   handler: src/poc/index.handler
-  #   events:
-  #     - http:
-  #         path: hola
-  #         method: get
-  #         cors: true               
-  #         restApiId: !Ref MyApiGateway  
-
 
 plugins:
   - serverless-offline
-
 
 package:
   individually: true
