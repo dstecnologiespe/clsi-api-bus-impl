@@ -1,0 +1,15 @@
+
+HelloWorldFunction:
+  Type: AWS::Serverless::Function
+  Properties:
+    FunctionName: HelloWorldFunction
+    CodeUri: src/poc/
+    Handler: index.handler
+    Policies: AWSLambdaBasicExecutionRole
+    Events:
+      HelloEndpoint:
+        Type: Api
+        Properties:
+          RestApiId: !Ref CLSIApiGateway
+          Path: /hola
+          Method: GET
