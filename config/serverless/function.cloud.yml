@@ -1,0 +1,9 @@
+  helloWorld:
+    name: UE2DESACOMLMBILAB001
+    handler: src/poc/index.handler
+    events:
+      - http:
+          path: hola
+          method: get
+          cors: true               
+          restApiId: !Ref MyApiGateway  

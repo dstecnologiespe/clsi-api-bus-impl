@@ -1,0 +1,7 @@
+Resources:
+    MyApiGateway:
+      Type: AWS::ApiGateway::RestApi
+      Properties:
+        Name: UE2APIDESACLSIV1
+        Description: API para el proyecto CLSI API
+        FailOnWarnings: true
